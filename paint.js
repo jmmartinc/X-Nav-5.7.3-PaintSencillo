@@ -63,10 +63,11 @@ function canvasApp(){
 	  // Get the mouse position in the canvas
 	  x = ev.pageX;
 	  y = ev.pageY;
+      size = document.getElementById("size").value;
 
 	  if (begin_drawing) {
 	    context.beginPath();
-	    context.arc(x, y, 7, (Math.PI/180)*0, (Math.PI/180)*360, false);
+	    context.arc(x, y, size, (Math.PI/180)*0, (Math.PI/180)*360, false);
 	    context.fill();
         context.closePath();
 	  }
